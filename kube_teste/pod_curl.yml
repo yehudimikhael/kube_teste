@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: curl-debug
+spec:
+ selector:
+  matchLabels:
+   app: curl-debug
+ template:
+  metadata:
+   labels:
+    app: curl-debug
+  spec:
+   containers:
+   - name: curl
+     image: radial/busyboxplus:curl
